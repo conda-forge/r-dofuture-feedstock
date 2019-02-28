@@ -11,7 +11,7 @@ Package license: LGPL (>= 2.1)
 
 Feedstock license: BSD 3-Clause
 
-Summary: Provides a '%dopar%' adaptor such that any type of futures can be used as backends for the 'foreach' framework.
+Summary: Provides a '%dopar%' adapter such that any type of futures can be used as backends for the 'foreach' framework.
 
 
 
@@ -113,11 +113,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bgruening](https://github.com/bgruening/)
-* [@cbrueffer](https://github.com/cbrueffer/)
-* [@daler](https://github.com/daler/)
-* [@dbast](https://github.com/dbast/)
-* [@dpryan79](https://github.com/dpryan79/)
-* [@jdblischak](https://github.com/jdblischak/)
-* [@johanneskoester](https://github.com/johanneskoester/)
+* [@conda-forge/r](https://github.com/conda-forge/r/)
 
