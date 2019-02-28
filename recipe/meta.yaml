@@ -1,4 +1,4 @@
-{% set version = "0.7.0" %}
+{% set version = '0.7.0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -13,9 +13,8 @@ source:
   sha256: 200f4c8592fd20b5ba59ee208900a427402583a1e69052bcef254a8fa80bfde0
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -23,17 +22,19 @@ build:
 
 requirements:
   build:
-
+    - {{posix}}zip               # [win]
   host:
     - r-base
-    - r-foreach >=1.4.3
-    - r-future >=1.6.2
-    - r-iterators >=1.0.8
+    - r-foreach >=1.4.4
+    - r-future >=1.10.0
+    - r-globals >=0.12.4
+    - r-iterators >=1.0.9
   run:
     - r-base
-    - r-foreach >=1.4.3
-    - r-future >=1.6.2
-    - r-iterators >=1.0.8
+    - r-foreach >=1.4.4
+    - r-future >=1.10.0
+    - r-globals >=0.12.4
+    - r-iterators >=1.0.9
 
 test:
   commands:
@@ -43,17 +44,31 @@ test:
 about:
   home: https://github.com/HenrikBengtsson/doFuture
   license: LGPL (>= 2.1)
-  summary: Provides a '%dopar%' adaptor such that any type of futures can be used as backends
+  summary: Provides a '%dopar%' adapter such that any type of futures can be used as backends
     for the 'foreach' framework.
   license_family: LGPL
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2.1'
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
-    - dpryan79
+    - conda-forge/r
+
+# Package: doFuture
+# Version: 0.7.0
+# Title: A Universal Foreach Parallel Adapter using the Future API of the 'future' Package
+# Depends: globals (>= 0.12.4), future (>= 1.10.0), foreach (>= 1.4.4), iterators (>= 1.0.9), parallel, utils
+# Suggests: doRNG (>= 1.6.6), markdown, R.rsp
+# VignetteBuilder: R.rsp
+# Authors@R: c(person("Henrik", "Bengtsson", role=c("aut", "cre", "cph"), email = "henrikb@braju.com"))
+# Description: Provides a '%dopar%' adapter such that any type of futures can be used as backends for the 'foreach' framework.
+# License: LGPL (>= 2.1)
+# LazyLoad: TRUE
+# URL: https://github.com/HenrikBengtsson/doFuture
+# BugReports: https://github.com/HenrikBengtsson/doFuture/issues
+# RoxygenNote: 6.1.1
+# NeedsCompilation: no
+# Packaged: 2019-01-06 06:29:07 UTC; hb
+# Author: Henrik Bengtsson [aut, cre, cph]
+# Maintainer: Henrik Bengtsson <henrikb@braju.com>
+# Repository: CRAN
+# Date/Publication: 2019-01-07 17:00:22 UTC
