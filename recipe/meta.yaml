@@ -26,13 +26,13 @@ requirements:
   host:
     - r-base
     - r-foreach >=1.4.4
-    - r-future >=1.10.0
+    - r-future >=1.12.0
     - r-globals >=0.12.4
     - r-iterators >=1.0.9
   run:
     - r-base
     - r-foreach >=1.4.4
-    - r-future >=1.10.0
+    - r-future >=1.12.0
     - r-globals >=0.12.4
     - r-iterators >=1.0.9
 
