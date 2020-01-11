@@ -1,4 +1,4 @@
-{% set version = '0.8.2' %}
+{% set version = "0.9.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/doFuture_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/doFuture/doFuture_{{ version }}.tar.gz
-  sha256: 686fe6d4de8a298ec3ef90250245fe05e1c819e3000d9ffbb511f2a6067cc95c
+  sha256: 294c6823de241f8a3fc9745ae5c93e54bddea916ccf79608cf3dc02b1facdee9
 
 build:
   merge_build_host: True  # [win]
