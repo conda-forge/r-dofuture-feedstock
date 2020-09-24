@@ -3,9 +3,9 @@ About r-dofuture
 
 Home: https://github.com/HenrikBengtsson/doFuture
 
-Package license: LGPL-2.1
+Package license: LGPL-2.1-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Provides a '%dopar%' adapter such that any type of futures can be used as backends for the 'foreach' framework.
 
