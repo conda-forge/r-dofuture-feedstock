@@ -1,4 +1,4 @@
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/doFuture_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/doFuture/doFuture_{{ version }}.tar.gz
-  sha256: 294c6823de241f8a3fc9745ae5c93e54bddea916ccf79608cf3dc02b1facdee9
+  sha256: 94be9e4f5eec8e6e288c638f6a56fdad36638855546bde1764792c1b74e31f75
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -44,11 +44,10 @@ test:
 about:
   home: https://github.com/HenrikBengtsson/doFuture
   license: LGPL-2.1
-  summary: Provides a '%dopar%' adapter such that any type of futures can be used as backends
-    for the 'foreach' framework.
+  summary: Provides a '%dopar%' adapter such that any type of futures can be used as backends for the 'foreach' framework.
   license_family: LGPL
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2.1'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2.1
 
 extra:
   recipe-maintainers:
