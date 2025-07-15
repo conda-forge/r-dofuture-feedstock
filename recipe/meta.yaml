@@ -1,4 +1,4 @@
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/doFuture_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/doFuture/doFuture_{{ version }}.tar.gz
-  sha256: e733c9402d94e56c68dccd600973f661f87222c5a210b7502555ce08dba90db7
+  sha256: 2aa6aca19a872d6001549316a0a9600200e1e68e7fa109e27531abc42f71c571
 
 build:
   number: 0
